@@ -20,8 +20,7 @@ html{
     position: fixed;
     top: 0;
     left: 30px;
-    right: 30;
-  
+    right: 30px;
 }
 #header .logo{
     width: 200px;
@@ -69,7 +68,52 @@ html{
 #content{
 
 }
-
+#content p{
+    height: 1000px;
+}
+/*FOOTER*/
 #footer{
-
+    float: left;
+    width: 100%;
+    background-color: #000;
+    height: 130px;
+    display: flex;
+    margin-bottom: 30px;
+    
+}
+#footer .footer-left{
+    padding: 10px 30px;
+    width: 50%;
+}
+#footer .footer-left img{
+    height: 90px
+}
+#footer .footer-left p{
+    color: #6c6c6c;
+    padding-left: 24px;
+}
+#footer .footer-right{
+    float: left;
+    width: 50%;
+    background-color: #e5dfdf;
+}
+#footer .footer-right li{
+    display: inline-block;
+}
+#footer .footer-right a{
+    text-decoration: none;
+    color: #FF7F50;
+}
+#social-network{
+    padding: 30px;
+    font-size: 32px;
+}
+#social-network li a{
+    padding: 0 24px;
+}
+#note-content{
+    padding-left: 8px;
+}
+#note-content li a{
+    padding: 0 5px;
 }
