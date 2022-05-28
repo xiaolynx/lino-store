@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/login.css">
     <script src="https://kit.fontawesome.com/0f39018271.js" crossorigin="anonymous"></script>
-    <title>Login</title>
+    <script src="/js/login.js"></script>
+	<title>Login</title>
 </head>
 <body>
 <div class="container" id="container">
@@ -32,10 +33,10 @@
 				<a href="#" class="social"><i class="fa-brands fa-google"></i></a>
 				</div>
 			<span>hoặc đăng nhập khi đã có tài khoản</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input id="username" type="email" placeholder="Email" />
+			<input id="password" type="password" placeholder="Password" />
 			<a href="#">Quên mật khẩu?</a>
-			<button>ĐĂNG NHẬP</button>
+			<button class="btn-login" type="button" onclick="myLogin()">ĐĂNG NHẬP</button>
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -53,6 +54,23 @@
 		</div>
 	</div>
 </div>
-<script src="/js/login.js"></script>
+<script>
+	function myLogin(){
+	let u = document.getElementById("username").nodeValue;
+	let p = document.getElementById("password").nodeValue;
+	if(u=='' && p==''){
+		alert("Infomation illegal");
+	}
+	else if(u=='admin' && p=='123'){
+		window.location.href("adminhome.html")
+	}
+	else if(u=='customer' && p=='123'){
+		window.location.href("linovn.html")
+	}
+	else{
+		
+	}
+}
+</script>
 </body>
 </html>
