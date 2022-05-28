@@ -6,71 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/login.css">
     <script src="https://kit.fontawesome.com/0f39018271.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="/js/login.js"></script>
 	<title>Login</title>
 </head>
 <body>
-<div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form action="#">
-			<h1>ĐĂNG KÝ</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fa-brands fa-google"></i></a>
-				</div>
-			<span>hoặc sử dụng email để đăng ký tài khoản</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>ĐĂNG KÝ</button>
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
-		<form action="#">
-			<h1>ĐĂNG NHẬP</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></i></a>
-				<a href="#" class="social"><i class="fa-brands fa-google"></i></a>
-				</div>
-			<span>hoặc đăng nhập khi đã có tài khoản</span>
-			<input id="username" type="email" placeholder="Email" />
-			<input id="password" type="password" placeholder="Password" />
-			<a href="#">Quên mật khẩu?</a>
-			<button class="btn-login" type="button" onclick="myLogin()">ĐĂNG NHẬP</button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Chào mừng bạn đã quay trở lại!</h1>
-                <p>Đã có tài khoản xin hãy đăng nhập</p>
-				<button class="ghost" id="signIn">Đăng nhập</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Xin chào!</h1>
-				<p>Đăng ký thông và bắt đầu hành trình với chúng tôi</p>
-				<button class="ghost" id="signUp">Đăng ký</button>
-			</div>
+	<div class="container">
+		<input type="checkbox" id="flip">
+		<div class="cover">
+		  <div class="front">
+			<img src="/image/login.png" alt="">
+			
+		  </div>
+		  <div class="back">
+			<img src="/image/login.png" alt="">
+		  </div>
 		</div>
-	</div>
-</div>
-<script>
-	function myLogin(){
-	let u = document.getElementById("username").nodeValue;
-	let p = document.getElementById("password").nodeValue;
-	if(u=='' && p==''){
-		alert("Infomation illegal");
-	}
-	else if(u=='admin' && p=='123'){
-		window.location.href("adminhome.html")
-	}
-	else if(u=='customer' && p=='123'){
-		window.location.href("linovn.html")
-	}
-	else{
-		
-	}
-}
-</script>
+		<div class="forms">
+			<div class="form-content">
+			  <div class="login-form">
+				<div class="title">Login</div>
+			  <form action="#">
+				<div class="input-boxes">
+				  <div class="input-box">
+					<i class="fas fa-envelope"></i>
+					<input type="text" placeholder="Enter your email" required>
+				  </div>
+				  <div class="input-box">
+					<i class="fas fa-lock"></i>
+					<input type="password" placeholder="Enter your password" required>
+				  </div>
+				  <div class="text"><a href="#">Forgot password?</a></div>
+				  <div class="button input-box">
+					<input type="submit" value="Sumbit">
+				  </div>
+				  <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+				</div>
+			</form>
+		  </div>
+			<div class="signup-form">
+			  <div class="title">Signup</div>
+			<form action="#">
+				<div class="input-boxes">
+				  <div class="input-box">
+					<i class="fas fa-user"></i>
+					<input type="text" placeholder="Enter your name" required>
+				  </div>
+				  <div class="input-box">
+					<i class="fas fa-envelope"></i>
+					<input type="text" placeholder="Enter your email" required>
+				  </div>
+				  <div class="input-box">
+					<i class="fas fa-lock"></i>
+					<input type="password" placeholder="Enter your password" required>
+				  </div>
+				  <div class="button input-box">
+					<input type="submit" value="Sumbit">
+				  </div>
+				  <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+				</div>
+		  </form>
+		</div>
+		</div>
+		</div>
+	  </div>
 </body>
 </html>
