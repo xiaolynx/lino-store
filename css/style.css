@@ -32,9 +32,8 @@ html{
 }
 #header .res{
     display: inline-block;
-    width: 541px;
     align-items: center;
-    padding-left: 340px;
+    padding-left: 680px;
 }
 #header .res a{
     color: #000;
